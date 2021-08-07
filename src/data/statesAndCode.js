@@ -1,3 +1,5 @@
+// List of states as expected from the endpoint and their corresponding code in HighChart maps
+
 export const statesAndCode = {
     'ng-ri': 'Rivers',
     'ng-kt': 'Katsina',

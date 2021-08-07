@@ -1,3 +1,5 @@
+// This is a map data of Nigeria used by HighChart maps
+
 const mapDataNigeria = {
   title: "Nigeria",
   version: "1.1.3",

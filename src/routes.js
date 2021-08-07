@@ -4,6 +4,7 @@ import { lazy } from 'react';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 
+//specify routes and their respective components
 const routes = [
     {
         title: 'Dashboard',

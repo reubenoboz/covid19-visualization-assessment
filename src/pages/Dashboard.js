@@ -32,22 +32,27 @@ const Dashboard = () => {
   const filterTerm = useSelector((state) => state.GeneralReducer.filterTerm); //fetch filter term from redux
   const status = useSelector((state) => state.GeneralReducer.status); //fetch status term from redux
 
+  //function to fetch covid data
   const getCovidData = async () => {
     dispatch(toggleCovidLoading());
     let res = await GetAllData();
     if (res.status === 200) {
+      //if api call is successful, save data to redux store
       dispatch(saveCovidData(res.data.data));
     } else {
+      //error message pops up on failure
       appNotification(res.statusText, 'Something went wrong!', 'error')
     }
-    
+    //stop loader
     dispatch(toggleCovidLoading());
   };
 
+  //fetch covid data on page load
   useEffect(() => {
     getCovidData();
   }, []);
 
+  //function to convert the incoming data to highchart maps format
   const splitCovidData = () => {
     let newData = [];
     covidData?.states?.filter((state) => state?.state?.toLowerCase().includes(filterTerm.toLowerCase())).map((item) => {
@@ -57,7 +62,7 @@ const Dashboard = () => {
     return newData;
   };
 
-
+  //set map options
   const mapOptions = {
     title: {
       text: getTitle(status),
@@ -101,6 +106,7 @@ const Dashboard = () => {
         <Loader />
       ) : (
         <div className="dashboard">
+          {/* Create summary cards */}
           <div className="summaryCards">
             <CovidCard
               title="Total Samples Tested"
@@ -139,7 +145,8 @@ const Dashboard = () => {
               )}
             />
           </div>
-
+          
+          {/* filter based on covid status */}
           <div className="filter_container my-3">
             <div className="filter">
               <label className="mr-1">FILTER:</label>
@@ -155,6 +162,7 @@ const Dashboard = () => {
             </div>
           </div>
 
+          {/* Draw map */}
           <HighchartsReact
             options={mapOptions}
             constructorType={"mapChart"}
