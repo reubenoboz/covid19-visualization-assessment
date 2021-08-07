@@ -1,0 +1,33 @@
+@mixin small-screens() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin medium-screens() {
+  @media only screen and (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin large-screens() {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin box-shadow($shadows...) {
+  box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+}
+
+// might remove if i dont need the border-radius
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+}
+
+@mixin box($radius: 6px, $border: 1px solid #000) {
+  @include rounded($radius);
+  border: $border;
+}

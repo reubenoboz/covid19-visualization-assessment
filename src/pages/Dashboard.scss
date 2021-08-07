@@ -1,0 +1,18 @@
+@import "../assets//scss/variables";
+@import "../assets//scss/mixins";
+
+.dashboard{
+    margin-top: 3rem;
+    .filter_container{
+        display: flex;
+        color: $text_black;
+    }
+
+    .summaryCards {
+        display: flex;
+        justify-content: space-between;
+        @include small-screens {
+            display: block;
+        }
+    }
+}

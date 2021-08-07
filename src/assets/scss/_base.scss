@@ -1,0 +1,129 @@
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(0.4em + 0.5vw);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto-Regular !important;
+  color: $text_grey !important;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+@for $i from 1 through 6 {
+  .m-#{$i} {
+    margin: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .mb-#{$i} {
+    margin-bottom: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .mt-#{$i} {
+    margin-top: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .ml-#{$i} {
+    margin-left: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .mr-#{$i} {
+    margin-right: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .mx-#{$i} {
+    margin: 0 $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .my-#{$i} {
+    margin: $i * 1rem 0;
+  }
+}
+
+@for $i from 1 through 6 {
+  .p-#{$i} {
+    padding: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .pt-#{$i} {
+    padding-top: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .pb-#{$i} {
+    padding-bottom: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .pl-#{$i} {
+    padding-left: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .pr-#{$i} {
+    padding-right: $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .px-#{$i} {
+    padding: 0 $i * 1rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .py-#{$i} {
+    padding: $i * 1rem 0;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}

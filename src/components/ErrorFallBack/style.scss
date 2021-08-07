@@ -1,0 +1,30 @@
+.error-fallback-view {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    text-align: center;
+
+    img {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      color: #1a1a1a;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 1rem 4rem;
+      background-color: #299f9e;
+      border-radius: 5px;
+      color: #ffffff;
+      border: 0px;
+      cursor: pointer;
+    }
+  }
+}

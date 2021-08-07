@@ -1,0 +1,27 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.covid_card {
+    display: flex;
+    justify-content: center;
+    @include small-screens{
+      display: block;
+    }
+
+  .covid_card_details {
+    padding: 2rem 1rem 2rem 1rem;
+    @include small-screens{
+      width: 100%;
+    }
+    .covid_title {
+      font-weight: bold;
+      color: $text_black;
+      text-align: center;
+    }
+    .covid_subtitle {
+      font-weight: bold;
+      color: #5657a4;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../assets/scss/variables'; 
+@import '../../assets/scss/mixins'; 
+
+
+.card{
+    @include box-shadow(-4px 3px 10px 4px rgba(153,153,153,0.25));
+    width: 100%;
+    height: auto;
+}

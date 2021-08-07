@@ -1,0 +1,73 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.header {
+  background-color: black;
+  padding: 2rem 5rem;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .header_logo {
+    height: 3rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    .header_heading {
+      display: flex;
+      align-items: center;
+      font-size: 2.1rem;
+      font-weight: bold;
+      font-family: Roboto-Bold;
+      border-bottom: 2px solid $text_white;
+      padding-bottom: 0.5rem;
+      color: $text_white;
+      span {
+        margin-left: 1rem;
+      }
+    }
+    .header_description {
+      margin: 2rem 0;
+      width: 30%;
+      font-size: 1.2rem;
+      color: $text_grey;
+      line-height: 1.6rem;
+      @include small-screens{
+        font-size: 1.5rem;
+        width: 70%
+      }
+    }
+    .search {
+      width: 50%;
+      @include small-screens{
+        width: 85%;
+      }
+      .search_input {
+        width: 90%;
+        padding: 1rem 2rem;
+        float: left;
+        border: none;
+        color: $text_black
+      }
+      .search_btn {
+        float: left;
+        width: 10%;
+        padding: 1rem 1rem;
+        background: $bg_white;
+        color: $text_grey;
+        border: none;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+      }
+      &::after{
+        content: "";
+        clear: both;
+        display: table;
+      }
+    }
+  }
+}
