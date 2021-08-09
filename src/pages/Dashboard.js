@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Layout from "../components/Layout/Layout";
 import {
@@ -112,7 +112,7 @@ const Dashboard = () => {
               title="Total Samples Tested"
               subtitle={formatter.format(
                 covidData?.totalSamplesTested
-                  ? parseInt(covidData?.totalSamplesTested.replace(/\,/g, ''))
+                  ? parseInt(covidData?.totalSamplesTested.replace(/,/g, ''))
                   : 0
               )}
             />
